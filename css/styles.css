@@ -1,8 +1,14 @@
 @font-face{
-    font-family: 'Montserrat', sans-serif;
-    src: url('../fonts/montserrat-v31-latin-regular.woff2');
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Medium.woff2');
     font-style: normal;
     font-weight: 400;
+}
+
+@font-face{
+    font-family: 'Montserrat-ExtraBold';
+    src: url('../fonts/Montserrat-ExtraBold.ttf');
+    font-weight: 800;
 }
 
 
@@ -32,8 +38,8 @@ img{
 
 /* padding: top right bottom left; */
 .container {
-    max-width: 1400px;
-    padding: 0 150px 0 10px;
+    max-width: 1420px;
+    padding: 0 10px;
     margin: 0 auto;
 }
 
@@ -41,7 +47,8 @@ body {
   background: linear-gradient(to bottom, orange, white, orange);
   min-height: 100vh;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
+  font-style: normal;
+  font-weight: 400; 
   font-size: 16px;
   line-height: 1.4;
   color: #000000
@@ -49,6 +56,7 @@ body {
 
 .nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     height: 250px;
@@ -57,6 +65,11 @@ body {
 .logo {
     position: relative;
     top: 11px;
+}
+
+.basket {
+    position: relative;
+    right: 50px;
 }
 
 .menu {
@@ -72,8 +85,147 @@ body {
 
 #main__link {
     font-weight: 700;
+}
+
+
+.top-grid {
+    display: grid;
+    grid-template: 100px 100px 85px 100px 1fr/ 1fr 1fr; 
+}
+
+.title {
+    font-family: 'Montserrat-ExtraBold';
+    font-size: 32px;
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    align-self: center;
+}
+
+.top__text {
+    grid-area: 3 / 1 / 4 / 2;
+    display: flex;
+    align-self: center;
+}
+
+.buy-btn {
+    cursor: pointer;
+    border: none;
+    background: red;
+    border-radius: 50px;
+    grid-area: 4 / 1 / 5 / 2;
+    display: flex;
+    align-self:center;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 150px;
+}
+
+.buy-btn__text {
+    color: white;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.top__image {
+    grid-area: 1 / 2 / 7 / 3;
+}
+
+.assortment-grid {
+    display: grid;
+    grid-template: repeat(2, 350px) / repeat(3, 1fr);
+    gap: 30px;
+    padding-left: 0;
+    text-align: center;
 
 }
+
+.assortment__title {
+    font-size: 45px; 
+    text-align: center;
+}
+
+.assortment__food__1{
+    grid-area: 1 / 1 / 2 / 2;
+
+}
+
+.assortment__food__2{
+    grid-area: 1 / 2 / 2 / 3;
+
+}
+
+.assortment__food__3{
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.assortment__food__4{
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.assortment__food__5{
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.assortment__food__6{
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.assortment__food__text {
+    font-size: 35px;
+    font-weight: 500;
+    justify-content: center;
+}
+
+.footer {
+    /* display: flex;
+    align-content: center; */
+    padding-top: 200px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+
+.instructions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 70px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+
+.company {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.rights {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+
+}  
+
+.socials {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    align-items: center;
+    padding: 0;
+    gap: 0 10px;
+}
+
+
+
+
+
+
 
 
 
